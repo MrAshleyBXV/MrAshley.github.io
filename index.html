@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JavaScript &amp; jQuery - Chapter 7: Introducing jQuery - Basic Example</title>
-    <link rel="stylesheet" href="style.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Made with Thimble</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+    <style>
+      body {
+  background-color: black;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 150px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+  text-align: center
+}
+    </style>
+    
   </head>
   <body>
-    <div id="page">
-      <h1 id="header">List</h1>
-      <h2>Buy groceries</h2>
-      <ul>
-        <li id="one" class="hot"><em>fresh</em> figs</li>
-        <li id="two" class="hot">pine nuts</li>
-        <li id="three" class="hot">honey</li>
-        <li id="four">balsamic vinegar</li>
-      </ul>
-    </div>
-    <script src="js/jquery-1.11.0.js"></script>
-    <script src="script.js"></script>
+    
+    <h1>Magic Eight Ball</h1>
+    <p id="fortune"></p>
+    <button onclick="shakeTheBall()">Click to Shake</button>
+    <script>
+    var magicEightBall = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes - definitely.", "You may rely on it.", "As I see it, yes.", "Most likely.", "Outlook good.", "Yes.", "Signs point to yes.", "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."]
+ 
+
+function shakeTheBall() {
+  document.getElementById("fortune").innerHTML = magicEightBall[Math.floor(Math.random()* magicEightBall.length - 1)];
+  
+}</script>
   </body>
 </html>
 
